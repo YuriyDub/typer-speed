@@ -1,0 +1,31 @@
+.page {
+	margin-top: 200px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	animation: appear 1s;
+
+	.title {
+		z-index: 1;
+		align-self: flex-start;
+		font-size: var(--fs-hg);
+		font-weight: var(--fw-light);
+		color: var(--colors-text);
+	}
+	img {
+		position: absolute;
+		display: -moz-box;
+		width: 600px;
+	}
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

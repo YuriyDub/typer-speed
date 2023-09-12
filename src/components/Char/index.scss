@@ -1,0 +1,8 @@
+span[data-valid="false"] {
+	background-color: var(--colors-incorrect);
+	color: var(--colors-incorrect);
+}
+span[data-valid="true"] {
+	background-color: var(--colors-correct);
+	color: var(--colors-correct);
+}

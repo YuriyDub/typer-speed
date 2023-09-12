@@ -1,0 +1,48 @@
+.toggler {
+	display: flex;
+	justify-content: center;
+	height: 30px;
+	width: 72px;
+	border-radius: 5px;
+	background-color: var(--colors-bottom);
+	box-shadow:
+		var(--colors-edge) 0px 2px 1px,
+		inset var(--colors-edge) 0px 0px 3px,
+		inset var(--colors-shadow) 0px 1px 3px,
+		inset var(--colors-shadow) 0px -1px 3px;
+	overflow: hidden;
+	transition: all 0.1s ease-in-out;
+	gap: 0px;
+	padding: 0px;
+
+	.leftSide {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 35px;
+		height: 30px;
+		background-color: var(--colors-top);
+		box-shadow: inset var(--colors-middle) -4px 0px 5px;
+	}
+	.rightSide {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 35px;
+		height: 30px;
+		background-color: var(--colors-top);
+		box-shadow: inset var(--colors-middle) 4px 0px 5px;
+	}
+	.disable {
+		display: flex;
+
+		align-items: center;
+		justify-content: center;
+		width: 35px;
+		height: 30px;
+		background-color: var(--colors-bottom);
+		:first-child {
+			opacity: 0.3;
+		}
+	}
+}

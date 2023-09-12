@@ -1,13 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+
+:root {
+	font-family: "Comfortaa", cursive;
+
+	--rad: 20px;
+
+	--fw-light: 300;
+	--fw-regular: 400;
+	--fw-middle: 500;
+	--fw-semibold: 600;
+	--fw-bold: 700;
+
+	--fs-sm: 16px;
+	--fs-md: 18px;
+	--fs-bg: 24px;
+	--fs-hg: 48px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body[data-theme="light"] {
+	--colors-middle: #eadbc8;
+	--colors-top: #f8f0e5;
+	--colors-bottom: #d9cbbb;
+	--colors-background: #a8a196;
+	--colors-edge: #dac0a3;
+	--colors-shadow: #9c9286;
+	--colors-highlight: #fff8f0;
+	--colors-text: #102c57;
+	--colors-correct: rgb(142, 232, 47);
+	--colors-incorrect: rgb(255, 102, 46);
 }
+
+body[data-theme="dark"] {
+	--colors-middle: #eadbc8;
+	--colors-top: #f8f0e5;
+	--colors-bottom: #d9cbbb;
+	--colors-background: #102c57;
+	--colors-edge: #dac0a3;
+	--colors-shadow: #9c9286;
+	--colors-highlight: #fffbf6;
+	--colors-text: #102c57;
+	--colors-correct: green;
+	--colors-incorrect: red;
+}
+

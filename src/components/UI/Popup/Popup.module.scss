@@ -1,0 +1,15 @@
+.popup {
+	display: flex;
+	animation: 0.5s appear;
+	position: absolute;
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

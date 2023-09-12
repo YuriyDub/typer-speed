@@ -1,0 +1,27 @@
+button {
+	height: 42px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	height: 40px;
+	padding: 10px;
+	background-color: var(--colors-top);
+	font-size: var(--fs-sm);
+	color: var(--colors-text);
+	border-radius: var(--rad);
+	box-shadow:
+		var(--colors-edge) 0px 2px 1px,
+		inset var(--colors-edge) 0px 0px 3px;
+	text-transform: lowercase;
+	transition: all 0.1s ease-in-out;
+
+	&:hover {
+		background-color: var(--colors-highlight);
+	}
+	&:active {
+		background-color: var(--colors-bottom);
+		box-shadow:
+			inset var(--colors-shadow) 0px 1px 3px,
+			inset var(--colors-shadow) 0px -1px 3px;
+	}
+}

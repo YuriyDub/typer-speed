@@ -1,0 +1,20 @@
+.clock {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	background-color: var(--colors-middle);
+	border-radius: 100%;
+	width: 60px;
+	.arrow {
+		align-self: center;
+		justify-self: center;
+		transform: rotateX("angle");
+		z-index: 1;
+	}
+	span {
+		align-self: center;
+		bottom: 0;
+		border-radius: 100%;
+		position: absolute;
+	}
+}

@@ -1,0 +1,23 @@
+.body {
+	padding: 3px;
+	margin: 10px;
+	width: 100%;
+	background-color: var(--colors-middle);
+	border-radius: var(--rad);
+
+	.bar {
+		height: 3px;
+		background-color: var(--colors-text);
+		border-radius: inherit;
+		text-align: right;
+		display: flex;
+		align-items: flex-start;
+		justify-content: end;
+
+		.label {
+			padding: 5px;
+			color: var(--colors-text);
+			font-weight: bold;
+		}
+	}
+}
