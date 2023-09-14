@@ -14,7 +14,7 @@ export const WarmUpPage = () => {
   const [userText, setUserText] = useState([]);
   const [randomSentence, setRandomSentence] = useState(getRandomSentence());
   const [speed, setSpeed] = useState(0);
-  const [errors, setErrors] = useState(0);
+  const [mistakes, setMistakes] = useState(0);
   const [startTime, setStartTime] = useState(null);
   const [endTime, setEndTime] = useState(null);
   const [isRun, setIsRun] = useState(false);
@@ -39,7 +39,7 @@ export const WarmUpPage = () => {
         }
 
         if (randomSentence[userText.length] !== char) {
-          setErrors((prevErrors) => prevErrors + 1);
+          setMistakes((prevErrors) => prevErrors + 1);
           return [...prev, { char, isValid: false }];
         } else {
           return [...prev, { char, isValid: true }];
@@ -49,7 +49,7 @@ export const WarmUpPage = () => {
   };
 
   const getAccuracy = () => {
-    const accuracy = Math.floor((1 - errors / randomSentence.length) * 100);
+    const accuracy = Math.floor((1 - mistakes / randomSentence.length) * 100);
     return accuracy || 0;
   };
 
@@ -62,7 +62,7 @@ export const WarmUpPage = () => {
 
   const resetAll = () => {
     setUserText([]);
-    setErrors(0);
+    setMistakes(0);
     setSpeed(0);
     setEndTime(null);
     setStartTime(null);
@@ -143,9 +143,7 @@ export const WarmUpPage = () => {
       </section>
       <ProgressBar completed={Math.floor((userText.length / randomSentence.length) * 100)} />
       <section className={styles.metrics}>
-        <div className={styles.points}>
-          <Timer time={endTime ? endTime - startTime : 0} maxTime={60} />
-        </div>
+        <Timer time={endTime ? endTime - startTime : 0} maxTime={60} />
         <div className={styles.speed}>
           <span>{speed}</span>
           <div>c/m</div>

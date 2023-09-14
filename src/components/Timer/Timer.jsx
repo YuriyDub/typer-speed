@@ -1,6 +1,7 @@
 import styles from './Timer.module.scss';
 
 export const Timer = ({ time, maxTime }) => {
+  time = Math.round((time / 1000 + Number.EPSILON) * 100) / 100;
   const normalizedTime = time / maxTime;
 
   return (
@@ -11,7 +12,7 @@ export const Timer = ({ time, maxTime }) => {
         src="../img/arrow.png"
         alt="arrow"
       />
-      <span>{time}s</span>
+      <span>{time}</span>
     </div>
   );
 };
